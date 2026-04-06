@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Budget Smart Meal Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --surface: #ffffff;
+      --green: #2d6a4f;
+      --green-light: #40916c;
+      --green-pale: #d8f3dc;
+      --accent: #b7e4c7;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e0d8;
+      --warn-bg: #fff8e1;
+      --warn-border: #f59e0b;
+      --warn-text: #92400e;
+      --radius: 12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--green);
+      color: #fff;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-icon {
+      width: 38px; height: 38px;
+      background: var(--green-pale);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .header-titles h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+    .header-titles p {
+      font-size: 0.78rem;
+      opacity: 0.75;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO STRIP ── */
+    .hero {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 60px 32px 48px;
+    }
+    .hero h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      opacity: 0.82;
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── WARNING BOX ── */
+    .warning-box {
+      background: var(--warn-bg);
+      border: 2px solid var(--warn-border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+    .warning-box .warn-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--warn-border);
+      margin-bottom: 6px;
+    }
+    .warning-box p {
+      color: var(--warn-text);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 32px 36px;
+      margin-bottom: 24px;
+      transition: box-shadow 0.2s;
+    }
+    .section:hover {
+      box-shadow: 0 4px 24px rgba(45,106,79,0.07);
+    }
+
+    .section-number {
+      display: inline-block;
+      background: var(--green-pale);
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 3px 12px;
+      margin-bottom: 10px;
+    }
+
+    h2.section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--green);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 24px 0 8px;
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--green-light);
+      margin: 18px 0 6px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: #333;
+      font-size: 0.96rem;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+    li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* no-collect list */
+    .no-collect li {
+      list-style: none;
+      padding-left: 0;
+    }
+    .no-collect li::before {
+      content: '';
+    }
+
+    /* divider */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 20px 0;
+    }
+
+    /* inline highlight */
+    .highlight {
+      background: var(--green-pale);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-weight: 600;
+      color: var(--green);
+      font-size: 0.9em;
+    }
+
+    /* contact card */
+    .contact-card {
+      background: var(--green-pale);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+    .contact-card a {
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* footer */
+    footer {
+      background: var(--green);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 28px 16px;
+      font-size: 0.85rem;
+    }
+    footer strong { color: #fff; }
+
+    /* responsive */
+    @media (max-width: 600px) {
+      .section { padding: 24px 18px; }
+      .hero { padding: 40px 18px 32px; }
+      .header-inner { padding: 14px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo-icon">🥗</div>
+    <div class="header-titles">
+      <h1>Budget Smart Meal Planner</h1>
+      <p>Privacy Policy</p>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h2>Privacy Policy</h2>
+  <p>We are committed to protecting your privacy and being transparent about our data practices.</p>
+  <div class="hero-badge">Last updated — current version</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <!-- DISCLAIMER -->
+  <div class="warning-box">
+    <div class="warn-label">⚠️ Important Medical Disclaimer</div>
+    <p>YOU SHOULD BE AWARE THAT BUDGET SMART MEAL PLANNER IS NOT A PROVIDER OF MEDICAL ADVICE. BEFORE YOU TAKE ANY ACTION THAT MAY AFFECT YOUR HEALTH OR SAFETY, PLEASE CONSULT WITH A LICENSED PROFESSIONAL.</p>
+  </div>
+
+  <!-- 1. INTRODUCTION -->
+  <div class="section">
+    <span class="section-number">Section 1</span>
+    <h2 class="section-title">Introduction</h2>
+    <p>This Privacy Policy describes how Budget Smart Meal Planner ("we," "our," or "us") collects, uses, and shares your personal information when you use our mobile application and services. We are committed to protecting your privacy and being transparent about our data practices.</p>
+  </div>
+
+  <!-- 2. INFORMATION WE COLLECT -->
+  <div class="section">
+    <span class="section-number">Section 2</span>
+    <h2 class="section-title">Information We Collect</h2>
+
+    <h3>2.1 Information You Provide Directly</h3>
+    <h4>Essential Information We Collect (Minimal Required Data):</h4>
+    <ul>
+      <li><strong>Name:</strong> Can be real name, stage name, or fake name - your choice</li>
+      <li><strong>Email and Password:</strong> Stored securely in Supabase database
+        <ul>
+          <li>We allow temporary/fake emails</li>
+          <li>We do NOT require email verification</li>
+          <li>If you use fake email and forget password, you are responsible (we cannot send reset links to non-existent emails)</li>
+        </ul>
+      </li>
+      <li><strong>User Goal:</strong> Your selection from 6 options (lose weight, gain weight, eat protein, eat calories, eat healthy, maintain weight)</li>
+      <li><strong>Diet Type:</strong> Your selection from 3 options (vegan, vegetarian, eats everything)</li>
+      <li><strong>Weekly Groceries Budget:</strong> Dollar amount you specify for meal planning</li>
+      <li><strong>Daily/Weekly Calorie or Protein Rate:</strong> Optional target numbers for meal planning</li>
+      <li><strong>Food Allergies:</strong> Optional but recommended for your safety - self-reported allergen list</li>
+      <li><strong>User Gender:</strong> This is essential information we collect as it influences the personalized meal plan we create for each user.</li>
+      <li><strong>User Age:</strong> This is also essential information we collect as it influences the personalized meal plan we create for each user, alongside gender.</li>
+    </ul>
+
+    <h4>Supported Profile Ranges:</h4>
+    <p>Our meal planning system is optimized for users within the following ranges:</p>
+    <ul>
+      <li><strong>Male:</strong> Age 18–40, Height 160–190 cm, Weight 55–100 kg</li>
+      <li><strong>Female:</strong> Age 18–40, Height 150–180 cm, Weight 45–80 kg</li>
+    </ul>
+    <p>If your personal profile falls outside these ranges, meal plan calculations and nutritional estimates may be less accurate as our system will extrapolate beyond its optimized data range. You acknowledge this limitation and accept full responsibility for evaluating whether generated meal plans are appropriate for your circumstances.</p>
+
+    <h4>Meal Logging Information (User-Entered Data):</h4>
+    <p>Custom Meal Entries: When you manually log meals, we collect:</p>
+    <ul>
+      <li>Meal name and description</li>
+      <li>Nutritional information (calories, protein content)</li>
+      <li>Meal cost</li>
+      <li>Your personal rating of the meal</li>
+      <li>Meal timing/category (breakfast, lunch, dinner, snack, or other meal types)</li>
+      <li>Ingredients used in your custom meals</li>
+    </ul>
+
+    <h4>Goal Tracking &amp; Progress Analytics:</h4>
+    <p>We store comprehensive data about your progress toward daily nutritional goals, including:</p>
+    <ul>
+      <li>Daily goal achievement status (whether you met or missed your targets)</li>
+      <li>Daily calorie goal targets and tracking</li>
+      <li>Estimated weight loss/gain and maintain weight projections per week based on your goals and calorie intake</li>
+      <li>Historical tracking data organized by day, month, and year</li>
+      <li>Long-term progress trends and patterns</li>
+    </ul>
+    <p>This data is stored permanently to provide you with meaningful insights over time</p>
+
+    <h4>3. User Health Responsibility:</h4>
+    <p>You are solely responsible for determining whether displayed calorie goals and weight loss/gain projections are healthy and appropriate for your individual circumstances. If projections appear unhealthy or unsafe, you should stop using the app and consult a healthcare professional.</p>
+
+    <h4>Meal Plan &amp; Ingredient Data:</h4>
+    <ul>
+      <li><strong>Generated Meal Plan Ingredients:</strong> When we create your weekly meal plans, we save the complete list of ingredients for each planned meal</li>
+      <li><strong>User-Logged Ingredients:</strong> We also store ingredient information from meals you manually log yourself</li>
+      <li><strong>Meal Family Classification:</strong> We maintain internal meal family/category classifications for organizational purposes. When we generate your weekly meal plan, these classifications are transferred to your related meal plan database for meal organization</li>
+    </ul>
+
+    <h4>Purpose of Data Collection:</h4>
+    <p>We collect this data to:</p>
+    <ul>
+      <li>Provide you with personalized weekly meal plans (3 meals per day for 7 days) that match your goal, diet type, budget, and avoid your reported allergies</li>
+      <li>Enable you to log and track your own meals and nutritional intake</li>
+      <li>Analyze your progress toward your dietary goals over time (daily, monthly, yearly)</li>
+      <li>Store your ingredient usage history for better meal planning and tracking</li>
+      <li>Help you understand your eating patterns and make informed decisions</li>
+    </ul>
+    <p>We will never use this data for any other purpose.</p>
+
+    <hr/>
+    <h4>What We ABSOLUTELY DO NOT Collect (And Never Will):</h4>
+    <ul class="no-collect">
+      <li>❌ <strong>No Government IDs</strong> - We never ask for passports, driver's licenses, social security numbers, or any government identification</li>
+      <li>❌ <strong>No Photos/Biometrics</strong> - We never ask for facial photos, fingerprints, or any biometric data</li>
+      <li>❌ <strong>No Financial Account Information</strong> - We never ask for bank account numbers, credit card details, or financial account access</li>
+      <li>❌ <strong>No Bank Account Balance or Details</strong> - We never request or access your banking information</li>
+      <li>❌ <strong>No Precise Location Data</strong> - We never ask for GPS permission, never track your location, never store location data in our database, and never request your address or precise whereabouts</li>
+      <li>❌ <strong>No Medical Records</strong> - We never ask for medical history, doctor information, or health records</li>
+      <li>❌ <strong>No Personal Sensitive Information</strong> - We never collect social security numbers, personal identification numbers, or sensitive personal records</li>
+      <li>❌ <strong>Database Structure Protection</strong> - Our database has no fields, tables, or storage capacity for user location, government IDs, photos, facial images, or any other personal sensitive information</li>
+      <li>❌ <strong>Strict Enforcement Policy</strong> - We may ban users who send us prohibited sensitive information via email or any other method, as our app contains no fields requesting such data and our database has no capacity to store it.</li>
+      <li>❌ <strong>IP addresses</strong> - your IP addresses will not be collected by us at all.</li>
+      <li>❌ <strong>Mobile network information</strong> - we will not collect your Mobile network information at all.</li>
+      <li>❌ <strong>Location data (city/country level)</strong> - we will not collect your location data like city and country level as well.</li>
+    </ul>
+
+    <h4>Unsolicited Sensitive Information:</h4>
+    <p>If you send us any of the above prohibited information via email or any other method:</p>
+    <ul>
+      <li>You are solely responsible for sending it without our request</li>
+      <li>We may ignore, delete, or ban your account for sending prohibited information</li>
+      <li>We accept zero responsibility for any sensitive information you choose to send us without authorization</li>
+    </ul>
+
+    <h4>Usage Information:</h4>
+    <ul>
+      <li>Favorite meals and recipes you save</li>
+      <li>Meal plan modifications and swaps you make</li>
+      <li>Grocery expense tracking data you input</li>
+      <li>App usage patterns and feature utilization</li>
+      <li>Meal logging frequency and patterns</li>
+    </ul>
+
+    <h3>2.2 Information We Collect Automatically</h3>
+    <h4>App Usage Data:</h4>
+    <ul>
+      <li>Features used and frequency of use</li>
+      <li>Time spent in the app</li>
+      <li>Meals marked as eaten/completed</li>
+      <li>Meal swaps and modifications</li>
+      <li>Search queries within the app</li>
+    </ul>
+    <h4>Device Information (Available through Google Play Console - not directly collected by us)</h4>
+    <ul>
+      <li>Device type, model, and operating system</li>
+      <li>App version and installation date</li>
+      <li>Crash reports and error logs</li>
+    </ul>
+    <h4>Analytics Data:</h4>
+    <ul>
+      <li>User engagement metrics</li>
+      <li>Feature performance data</li>
+      <li>App performance and stability data</li>
+    </ul>
+
+    <h3>2.3 Health and Fitness Data (Google Fit / Apple HealthKit Integration)</h3>
+    <p>To provide personalized wellness tracking, Budget Smart Meal Planner enables users to connect their accounts with Google Fit (Android) or Apple HealthKit (iOS).</p>
+    <ul>
+      <li><strong>What we collect:</strong> With your explicit permission, we request read access exclusively to your daily Step Count data. We do not request, access, or track your GPS location, heart rate, or sleep data.</li>
+      <li><strong>How we use it:</strong> We use your daily step count purely to provide our "Step Tracker &amp; Fitness" app feature. Based on the steps retrieved, our app calculations locally estimate your daily distance walked and active calories burned. We compare these burned calories against your personalized meal plans to help you determine if you are maintaining a caloric deficit or surplus in accordance with your weight goals (e.g., Lose Weight or Gain Weight).</li>
+      <li><strong>Protection and Sharing:</strong> Your health and step data is retrieved securely and is never sold, licensed, or shared with third-party advertisers or external brokers. You may revoke the app's access to this data at any time via your device's native health settings. Our use of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.</li>
+    </ul>
+
+    <h3>2.4 Information from Third Parties</h3>
+    <h4>Social Media Integration: (If applicable)</h4>
+    <ul>
+      <li>Profile information from connected social accounts</li>
+      <li>Friends list for sharing features</li>
+    </ul>
+    <h4>Integration Partners:</h4>
+    <ul>
+      <li>Data from connected fitness apps or wearable devices</li>
+      <li>Grocery store loyalty program data (with your consent)</li>
+    </ul>
+  </div>
+
+  <!-- 3. HOW WE USE YOUR INFORMATION -->
+  <div class="section">
+    <span class="section-number">Section 3</span>
+    <h2 class="section-title">How We Use Your Information</h2>
+
+    <h3>3.1 Primary Services</h3>
+    <ul>
+      <li><strong>Weekly Meal Plan Generation:</strong> Create personalized 7-day meal plans (breakfast, lunch, dinner) based on your specified budget, goals, dietary type, and allergies</li>
+      <li><strong>Budget-Based Planning:</strong> Calculate meal recommendations within your specified weekly grocery budget</li>
+      <li><strong>Budget Saving Tips:</strong> Provide general money-saving suggestions and grocery shopping tips (accuracy not guaranteed - tips are for informational purposes only and may not reflect current market conditions or local pricing)</li>
+      <li><strong>Goal-Oriented Planning:</strong> Generate meals aligned with your selected goal (weight loss, weight gain, healthy eating, calorie tracking, protein intake, weight maintenance)</li>
+      <li><strong>Dietary Accommodation:</strong> Filter meal recommendations based on your dietary type (vegan, vegetarian, omnivore) and self-reported allergies</li>
+      <li><strong>Progress Tracking:</strong> Monitor your meal planning history and dietary goal progress</li>
+      <li><strong>Personalization:</strong> Customize recommendations based on your meal preferences and usage patterns</li>
+    </ul>
+
+    <h3>3.2 Service Improvement</h3>
+    <ul>
+      <li>Analyze usage patterns to improve app functionality</li>
+      <li>Develop new features based on user needs</li>
+      <li>Optimize meal recommendations and algorithms</li>
+      <li>Fix bugs and enhance performance</li>
+    </ul>
+
+    <h3>3.3 Communication</h3>
+    <ul>
+      <li>Send important service updates and notifications</li>
+      <li>Provide customer support and respond to inquiries</li>
+      <li>Send promotional materials (with your consent)</li>
+      <li>Remind you about meal planning or grocery shopping</li>
+    </ul>
+
+    <h3>3.4 Legal and Safety</h3>
+    <ul>
+      <li>Comply with legal obligations</li>
+      <li>Protect against fraud and abuse</li>
+      <li>Enforce our Terms and Conditions</li>
+      <li>Protect user safety and security</li>
+    </ul>
+
+    <h3>3.5 Health and Safety Disclaimers for Calorie and Weight Projections</h3>
+    <ul>
+      <li><strong>No Medical Advice:</strong> Calorie goals and weight loss/gain projections are estimates only and do not constitute medical or nutritional advice</li>
+      <li><strong>User Responsibility:</strong> You are solely responsible for evaluating whether displayed calorie targets and weight change projections are safe and appropriate for your health</li>
+      <li><strong>Health Risk Acknowledgment:</strong> If weight loss/gain projections appear too rapid, extreme, or unhealthy, you must stop using the app and consult healthcare professionals</li>
+      <li><strong>No Liability:</strong> We are not liable for any health consequences resulting from following displayed calorie goals or weight change projections</li>
+      <li><strong>Individual Variation:</strong> Actual results will vary significantly based on metabolism, activity level, medical conditions, and other individual factors beyond our control</li>
+      <li><strong>Professional Consultation Required:</strong> Always consult doctors, registered dietitians, or qualified healthcare providers before following any calorie restriction or weight change programs</li>
+    </ul>
+
+    <h3>3.6 Calorie Goal and Weight Projection Disclaimers</h3>
+    <ul>
+      <li>Daily calorie goals and weekly weight loss/gain projections are AI-generated estimates</li>
+      <li>These projections do not account for individual medical conditions, metabolism variations, or health status</li>
+      <li>Displayed weight change rates may be unhealthy or inappropriate for your specific circumstances</li>
+      <li>You acknowledge full responsibility for evaluating the safety of all calorie goals and weight projections before following them</li>
+      <li>We strongly recommend consulting healthcare professionals before following any weight change programs</li>
+      <li><strong>No Medical Advice:</strong> Calorie targets and weight projections do not constitute medical, nutritional, or health advice</li>
+      <li><strong>Individual Results Vary:</strong> Actual weight changes and health outcomes will differ significantly based on factors beyond our control</li>
+      <li><strong>User's Right to Stop:</strong> If at any time—whether at the start of your meal plan, during the application of calorie goals, or at any point while using the app—you feel the displayed calorie goals or weight projections are unhealthy, uncomfortable, or inappropriate for you, you should immediately stop using these features and consult healthcare professionals</li>
+      <li><strong>Continued Use is User's Choice:</strong> If you review the calorie goals and weight projections and decide to continue using them despite any concerns, you accept full and sole responsibility for that decision</li>
+      <li><strong>No Liability for Continued Use:</strong> We are not liable for any health consequences, adverse effects, or negative outcomes if you choose to continue following calorie goals or weight projections that you believe may be unhealthy or inappropriate for your circumstances</li>
+      <li><strong>Voluntary Assumption of Risk:</strong> By continuing to use the app's calorie and weight projection features after reviewing them, you voluntarily assume all risks associated with following those recommendations</li>
+    </ul>
+
+    <h3>3.7 Budget Saving Tips Disclaimer</h3>
+    <ul>
+      <li>Budget and money-saving tips are general suggestions only and accuracy is not guaranteed</li>
+      <li>Tips may become outdated due to market changes, inflation, or regional variations</li>
+      <li>We are not responsible for the effectiveness or accuracy of any budget-saving recommendations</li>
+      <li>Users should verify all budget tips and shopping suggestions independently</li>
+      <li>Tips are provided for informational purposes only and do not constitute financial advice</li>
+      <li>Actual savings will vary based on location, store pricing, shopping habits, and market conditions</li>
+    </ul>
+  </div>
+
+  <!-- 4. HOW WE SHARE YOUR INFORMATION -->
+  <div class="section">
+    <span class="section-number">Section 4</span>
+    <h2 class="section-title">How We Share Your Information</h2>
+
+    <h3>4.1 We DO NOT Sell Your Personal Information</h3>
+    <p>We do not sell, rent, or trade your personal information to third parties for their marketing purposes.</p>
+
+    <h3>4.2 Service Providers</h3>
+    <p>We may share information with trusted third-party service providers who help us operate our app:</p>
+    <ul>
+      <li><strong>Cloud Storage Providers:</strong> Supabase for secure user data storage</li>
+      <li><strong>Payment Processors:</strong> Google Play billing system and RevenueCat for subscription management</li>
+      <li><strong>Analytics Services:</strong> RevenueCat for subscription analytics and Google Play Console for app performance</li>
+      <li><strong>App Store Platforms:</strong> Google Play Store (currently) and Apple App Store (future expansion)</li>
+      <li><strong>Customer Support Tools:</strong> For providing user assistance (as implemented)</li>
+    </ul>
+
+    <h4>4.2.1 Service Provider Data Collection Clarification</h4>
+    <p>Our third-party service providers collect and process certain data independently as part of their platform services:</p>
+    <ul>
+      <li><strong>Google Play Console:</strong> Automatically collects app performance data for all apps on their platform</li>
+      <li><strong>RevenueCat:</strong> Processes subscription and payment data as part of their billing services</li>
+      <li><strong>Supabase:</strong> Stores only the data we directly collect from you as listed in section 2.1</li>
+    </ul>
+    <p>We access aggregate reports and analytics from these services but do not control their independent data collection practices. These providers operate under their own privacy policies for any data they collect directly from users or devices.</p>
+
+    <h3>4.3 Legal Requirements</h3>
+    <p>We may disclose information when required by law or to:</p>
+    <ul>
+      <li>Respond to legal process or government requests</li>
+      <li>Protect our rights, property, or safety</li>
+      <li>Protect the rights, property, or safety of our users</li>
+      <li>Investigate fraud or security issues</li>
+    </ul>
+
+    <h3>4.4 Business Transfers</h3>
+    <p>If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</p>
+
+    <h3>4.5 With Your Consent</h3>
+    <p>We may share information in other circumstances with your explicit consent.</p>
+  </div>
+
+  <!-- 5. DATA SECURITY -->
+  <div class="section">
+    <span class="section-number">Section 5</span>
+    <h2 class="section-title">Data Security</h2>
+
+    <h3>5.1 Security Measures</h3>
+    <p>We implement appropriate technical and organizational measures to protect your personal information:</p>
+    <ul>
+      <li>Encryption of data in transit and at rest</li>
+      <li>Regular security assessments and updates</li>
+      <li>Access controls and employee training</li>
+      <li>Secure data centers and infrastructure</li>
+    </ul>
+
+    <h3>5.2 Limitations</h3>
+    <p>While we strive to protect your information, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
+  </div>
+
+  <!-- 6. YOUR PRIVACY RIGHTS -->
+  <div class="section">
+    <span class="section-number">Section 6</span>
+    <h2 class="section-title">Your Privacy Rights</h2>
+
+    <h3>6.1 Your Data Rights and Our Response Commitments</h3>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of your personal information (we will respond within 30 days)</li>
+      <li><strong>Update:</strong> Correct or update your information through the app settings</li>
+      <li><strong>Delete:</strong> Request deletion of your account and associated data (processed immediately through app or within 7 days via email request)</li>
+      <li><strong>Export:</strong> Download your meal planning data in a portable format (available within 30 days of request)</li>
+      <li><strong>Restrict:</strong> Limit how we process your information (contact us with specific restrictions)</li>
+      <li><strong>Object:</strong> Object to processing based on legitimate interests (though our processing is primarily based on providing requested services)</li>
+    </ul>
+
+    <h4>Response Timeframes:</h4>
+    <ul>
+      <li><strong>Account Deletion:</strong> Immediate through app, within 7 days via email</li>
+      <li><strong>Data Export Requests:</strong> Within 30 days</li>
+      <li><strong>Data Access Requests:</strong> Within 30 days</li>
+      <li><strong>Data Correction Requests:</strong> Immediate through app settings</li>
+      <li><strong>All Other Requests:</strong> Within 30 days of receiving clear, verifiable requests</li>
+    </ul>
+
+    <h4>Request Processing:</h4>
+    <ul>
+      <li>All requests must include verification of identity (matching account email)</li>
+      <li>Requests will be processed free of charge</li>
+      <li>Complex requests may require additional verification for security purposes</li>
+      <li>We will confirm receipt of your request within 3 business days</li>
+    </ul>
+
+    <h3>6.2 Communication Preferences</h3>
+    <p>You can:</p>
+    <ul>
+      <li>Contact us via email at <a href="mailto:smartmealpro1@gmail.com">smartmealpro1@gmail.com</a> for support</li>
+      <li>Use in-app contact features in the Profile tab</li>
+      <li>View subscription and billing information at any time in the Profile tab</li>
+      <li>Access cancellation options and renewal details continuously through the app interface</li>
+    </ul>
+    <p>Note: We do not send promotional emails, newsletters, or marketing communications</p>
+
+    <h3>6.3 Account Deletion vs. Logout - Important Distinction</h3>
+    <h4>LOGOUT DOES NOT DELETE DATA:</h4>
+    <ul>
+      <li>Logging out of the app does NOT delete your personal information</li>
+      <li>Logging out only ends your current session - all your data remains stored</li>
+      <li>Your account and data remain active even when logged out</li>
+      <li>We continue to store your information until you specifically delete your account</li>
+    </ul>
+
+    <h4>ACCOUNT DELETION REMOVES ALL DATA:</h4>
+    <p>You can permanently delete your account and all associated data through two methods:</p>
+    <p><strong>Method 1 (Recommended): Self-Service Deletion</strong></p>
+    <ul>
+      <li>Delete your account directly through the Profile tab in the app</li>
+      <li>All data is immediately and permanently deleted from our systems and Supabase storage</li>
+      <li>Complete removal including name, email, dietary preferences, meal plans, transaction history, favorites, and usage data</li>
+    </ul>
+    <p><strong>Method 2: Contact Us for Deletion</strong></p>
+    <ul>
+      <li>Email us at <a href="mailto:smartmealpro1@gmail.com">smartmealpro1@gmail.com</a> with your name and signup email address</li>
+      <li>We will delete your account and all associated data</li>
+      <li>We strongly recommend Method 1 (self-service) for immediate deletion</li>
+    </ul>
+
+    <h4>During Data Breach Situations:</h4>
+    <ul>
+      <li>Both deletion methods remain available during any security incidents</li>
+      <li>We recommend self-service deletion for immediate data removal</li>
+      <li>Account deletion is irreversible and cannot be undone</li>
+    </ul>
+  </div>
+
+  <!-- 7. DATA RETENTION -->
+  <div class="section">
+    <span class="section-number">Section 7</span>
+    <h2 class="section-title">Data Retention</h2>
+
+    <h3>7.1 Retention Periods</h3>
+    <p>We retain your information only as long as necessary to provide services and fulfill legal obligations:</p>
+    <ul>
+      <li><strong>While Account is Active:</strong> All user data is retained as long as the account exists (including when logged out)</li>
+      <li><strong>After Account Deletion:</strong> All personal data is immediately and permanently deleted</li>
+      <li><strong>Logout vs. Account Deletion:</strong> Logging out does NOT delete data - only account deletion removes information</li>
+      <li><strong>Subscription and Payment Records:</strong> As required by law (typically 7 years) - only for legal compliance</li>
+      <li><strong>Free Trial Data:</strong> 12 months from trial end date - only for preventing abuse</li>
+      <li><strong>Support Communications:</strong> 3 years from last contact - only for service improvement</li>
+    </ul>
+
+    <h3>7.2 Automated Deletion</h3>
+    <p>Inactive accounts may be automatically deleted after 2 years of inactivity with prior notice.</p>
+  </div>
+
+  <!-- 8. CHILDREN'S PRIVACY -->
+  <div class="section">
+    <span class="section-number">Section 8</span>
+    <h2 class="section-title">Children's Privacy and Parental Responsibility</h2>
+
+    <h3>8.1 Age Verification</h3>
+    <ul>
+      <li>Our app is intended for users 18 years and older</li>
+      <li>We do not collect, request, or verify age information from users</li>
+      <li>We do not knowingly collect personal information from minors</li>
+    </ul>
+
+    <h3>8.2 Parental Responsibility</h3>
+    <ul>
+      <li><strong>Full Parental Oversight:</strong> Parents and guardians are completely responsible for their minor children's use of this app</li>
+      <li><strong>Content Supervision:</strong> Parents must review all meal recommendations, ingredients, and cooking instructions before allowing minors to use them</li>
+      <li><strong>Safety Monitoring:</strong> Parents are responsible for ensuring meal plans are appropriate for their child's dietary needs and allergies</li>
+      <li><strong>Account Control:</strong> Parents should control and monitor any account access by minors</li>
+      <li><strong>Data Protection:</strong> Parents are responsible for any personal information their children may input into the app</li>
+    </ul>
+
+    <h3>8.3 No Age-Specific Protections</h3>
+    <ul>
+      <li>Since we do not collect age information, we do not implement age-specific privacy protections</li>
+      <li>All users are treated as adults for privacy and data handling purposes</li>
+      <li>Parents must provide any additional privacy protections they deem necessary for their children</li>
+    </ul>
+
+    <h3>8.4 Parental Action Required</h3>
+    <p>If parents discover their minor child has used our app, they should:</p>
+    <ul>
+      <li>Review any meal plans or recommendations the child accessed</li>
+      <li>Delete the account if they do not want their child using the service</li>
+      <li>Contact us if they have concerns about their child's usage</li>
+    </ul>
+  </div>
+
+  <!-- 9. INTERNATIONAL DATA TRANSFERS -->
+  <div class="section">
+    <span class="section-number">Section 9</span>
+    <h2 class="section-title">International Data Transfers</h2>
+
+    <h3>9.1 Cross-Border Processing</h3>
+    <p>Your information may be processed in countries other than your residence, including the United Kingdom where our registered office is located. We ensure appropriate safeguards are in place for international transfers and comply with applicable data protection laws in all regions where we operate (US, Canada, UK, EU, Australia, etc.).</p>
+
+    <h3>9.2 Legal Basis for Processing (GDPR)</h3>
+    <p>For EU users, we process data based on:</p>
+    <ul>
+      <li>Your consent</li>
+      <li>Contract performance</li>
+      <li>Legal obligations</li>
+      <li>Legitimate interests (with privacy impact assessments)</li>
+    </ul>
+  </div>
+
+  <!-- 10. REGIONAL PRIVACY RIGHTS -->
+  <div class="section">
+    <span class="section-number">Section 10</span>
+    <h2 class="section-title">Regional Privacy Rights</h2>
+
+    <h3>10.1 European Users (GDPR)</h3>
+    <p>Additional rights include:</p>
+    <ul>
+      <li>Right to data portability</li>
+      <li>Right to object to processing</li>
+      <li>Right to withdraw consent</li>
+      <li>Right to lodge complaints with supervisory authorities</li>
+    </ul>
+
+    <h3>10.2 California Users (CCPA)</h3>
+    <p>Additional rights include:</p>
+    <ul>
+      <li>Right to know about personal information collected</li>
+      <li>Right to delete personal information</li>
+      <li>Right to opt-out of sale (though we don't sell data)</li>
+      <li>Right to non-discrimination for exercising rights</li>
+    </ul>
+
+    <h3>10.3 Other Jurisdictions</h3>
+    <p>We comply with applicable privacy laws in all jurisdictions where we operate.</p>
+  </div>
+
+  <!-- 11. COOKIES AND TRACKING -->
+  <div class="section">
+    <span class="section-number">Section 11</span>
+    <h2 class="section-title">Cookies and Tracking Technologies</h2>
+
+    <h3>11.1 Types of Tracking</h3>
+    <h4>Cookies We May Use Directly:</h4>
+    <ul>
+      <li><strong>Essential Cookies:</strong> Required for app functionality</li>
+      <li><strong>Preference Cookies:</strong> To remember your settings within the app</li>
+    </ul>
+
+    <h4>Third-Party Platform Analytics (Not Directly Collected by Us):</h4>
+    <ul>
+      <li><strong>Google Play Console:</strong> Automatically provides aggregate app performance data to all app developers on their platform, including general usage statistics and crash reports</li>
+      <li><strong>RevenueCat:</strong> Processes subscription analytics data as part of their payment processing services</li>
+    </ul>
+    <p>Important Distinction: Google Play Console and RevenueCat collect and process data according to their own privacy policies as part of their platform services. We access aggregate analytics reports from these services but do not directly collect the underlying user data.</p>
+
+    <h3>11.2 Your Choices</h3>
+    <p>You can control tracking through:</p>
+    <ul>
+      <li>App settings</li>
+      <li>Device privacy settings</li>
+      <li>Browser settings (for web components)</li>
+    </ul>
+  </div>
+
+  <!-- 12. THIRD-PARTY LINKS -->
+  <div class="section">
+    <span class="section-number">Section 12</span>
+    <h2 class="section-title">Third-Party Links and Services</h2>
+
+    <h3>12.1 External Links</h3>
+    <p>Our app may contain links to third-party websites or services. We are not responsible for their privacy practices.</p>
+
+    <h3>12.2 Third-Party SDKs</h3>
+    <p>We may use third-party software development kits (SDKs) that may collect data according to their own privacy policies.</p>
+  </div>
+
+  <!-- 13. UPDATES -->
+  <div class="section">
+    <span class="section-number">Section 13</span>
+    <h2 class="section-title">Updates to This Privacy Policy</h2>
+
+    <h3>13.1 Changes</h3>
+    <p>We may update this Privacy Policy to reflect changes in our practices or legal requirements.</p>
+
+    <h3>13.2 Notification of Privacy Policy Changes</h3>
+    <ul>
+      <li><strong>App Update Delivery:</strong> Privacy policy changes are communicated through app updates</li>
+      <li><strong>User Responsibility:</strong> Users must update their app to receive current privacy policy information</li>
+      <li><strong>No Separate Notifications:</strong> We do not send email or push notifications about privacy policy changes</li>
+      <li><strong>Continued Use:</strong> Using updated app versions indicates acceptance of any revised privacy policy</li>
+      <li><strong>Stay Informed:</strong> Users should keep their app updated to remain aware of current privacy practices</li>
+    </ul>
+
+    <h3>13.3 Continued Use</h3>
+    <p>Continued use of the app after changes indicates acceptance of the updated policy.</p>
+  </div>
+
+  <!-- 14. CONTACT US -->
+  <div class="section">
+    <span class="section-number">Section 14</span>
+    <h2 class="section-title">Contact Us</h2>
+
+    <h3>14.1 Privacy Questions</h3>
+    <p>For questions about this Privacy Policy or our privacy practices, contact us:</p>
+    <div class="contact-card">
+      <p>📧 <strong>Email:</strong> <a href="mailto:smartmealpro1@gmail.com">smartmealpro1@gmail.com</a></p>
+      <p>📍 <strong>Address:</strong> 2nd Floor College House, 17 King Edwards Road, Ruislip, London, United Kingdom, HA4 7AE</p>
+      <p>📱 <strong>In-App Support:</strong> Use the contact feature in the Profile tab within the app</p>
+    </div>
+
+    <h3>14.2 Data Protection Officer</h3>
+    <p>If required by local law in your jurisdiction, contact our Data Protection Officer at: <a href="mailto:smartmealpro1@gmail.com">smartmealpro1@gmail.com</a></p>
+
+    <h3>14.3 Response Time</h3>
+    <p>We will respond to privacy requests within 30 days (or as required by applicable law).</p>
+  </div>
+
+  <!-- 15. SPECIAL CONSIDERATIONS -->
+  <div class="section">
+    <span class="section-number">Section 15</span>
+    <h2 class="section-title">Special Considerations</h2>
+
+    <h3>15.1 Health Information</h3>
+    <p>Your dietary and health information is particularly sensitive. We:</p>
+    <ul>
+      <li>Use additional security measures for health data</li>
+      <li>Limit access on a need-to-know basis</li>
+      <li>Do not use health information for marketing without explicit consent</li>
+      <li>Comply with applicable health information regulations</li>
+    </ul>
+  </div>
+
+  <!-- 16. DATA BREACH RESPONSE -->
+  <div class="section">
+    <span class="section-number">Section 16</span>
+    <h2 class="section-title">Data Breach Response and Risk Mitigation</h2>
+
+    <h3>16.1 Minimal Data Collection Strategy</h3>
+    <ul>
+      <li><strong>Privacy by Design:</strong> We intentionally collect only essential information needed for meal planning services</li>
+      <li><strong>No Sensitive Personal Data:</strong> We do not collect government IDs, phone numbers, photos, or other highly sensitive personal information</li>
+      <li><strong>Reduced Breach Impact:</strong> Limited data collection significantly reduces potential harm from any security incidents</li>
+    </ul>
+
+    <h3>16.2 Data Breach Response Protocol and Minimal Risk Impact</h3>
+    <ul>
+      <li><strong>Minimal Data Collection Benefits:</strong> Our intentionally limited data collection significantly reduces potential harm from any security incidents</li>
+      <li><strong>Low-Risk Profile:</strong> Since we collect only basic meal planning preferences (name, email, goals, diet type, budget, allergies), potential breach impact is minimal compared to apps collecting sensitive financial, medical, or personal identification data</li>
+      <li><strong>Risk Assessment:</strong> Any potential breach is immediately assessed, but limited to low-risk meal planning data only</li>
+      <li><strong>User Notification:</strong> If a breach occurs affecting user data, we notify affected users within 7 days through available communication methods, which may include in-app notices, email, or app updates</li>
+      <li><strong>Authority Notification:</strong> We comply with applicable data breach notification laws in relevant jurisdictions</li>
+      <li><strong>User Options During Breach:</strong> Users concerned about their meal planning data can:
+        <ul>
+          <li>Delete their account directly through the app (all data automatically deleted)</li>
+          <li>Contact us at <a href="mailto:smartmealpro1@gmail.com">smartmealpro1@gmail.com</a> to request account and data deletion</li>
+        </ul>
+      </li>
+      <li><strong>Remedial Action:</strong> Immediate steps are taken to secure systems and prevent further unauthorized access</li>
+      <li><strong>Complete Data Removal:</strong> Upon account deletion, all user meal planning data is permanently removed from Supabase storage</li>
+      <li><strong>Limited Exposure:</strong> Even in worst-case breach scenarios, exposed data is limited to non-sensitive meal planning preferences with no financial, medical, or identification information at risk</li>
+    </ul>
+
+    <h3>16.3 Enhanced Security Due to Minimal Data</h3>
+    <ul>
+      <li><strong>Lower Risk Profile:</strong> Since we don't collect highly sensitive personal information, the impact of potential breaches is significantly reduced</li>
+      <li><strong>Secure Infrastructure:</strong> User data is stored securely through Supabase with industry-standard encryption</li>
+      <li><strong>Third-Party Service Dependencies:</strong> If our database service experiences downtime, we work to resolve issues as quickly as possible</li>
+      <li><strong>Regular Security Updates:</strong> Systems are regularly updated to maintain security standards</li>
+    </ul>
+  </div>
+
+  <!-- 17. LIABILITY LIMITATIONS -->
+  <div class="section">
+    <span class="section-number">Section 17</span>
+    <h2 class="section-title">Liability Limitations for Privacy Matters</h2>
+
+    <h3>17.1 Maximum Liability for Privacy Claims</h3>
+    <p>Our total liability to you for any privacy-related claims, data breaches, or mishandling of personal information shall not exceed the amount you paid for your current subscription period:</p>
+    <ul>
+      <li><strong>Free Plan Users:</strong> Maximum liability is $0</li>
+      <li><strong>Weekly Plan Users:</strong> Maximum liability is $2.99</li>
+      <li><strong>Monthly Plan Users:</strong> Maximum liability is $7.99</li>
+      <li><strong>Yearly Plan Users:</strong> Maximum liability is $44.99</li>
+    </ul>
+
+    <h3>17.2 Privacy Liability Limitations</h3>
+    <ul>
+      <li>This limitation applies to all privacy-related claims including data breaches, unauthorized access, or misuse of personal information</li>
+      <li>We are not liable for indirect, consequential, or punitive damages related to privacy matters</li>
+      <li>Our liability is limited regardless of the legal theory upon which any privacy claim is based</li>
+      <li>This limitation is in addition to all other protections and limitations in our Terms and Conditions</li>
+    </ul>
+  </div>
+
+  <!-- 18. PLATFORM AND BUSINESS DISCLAIMERS -->
+  <div class="section">
+    <span class="section-number">Section 18</span>
+    <h2 class="section-title">Platform and Business Operation Disclaimers</h2>
+
+    <h3>18.1 App Store and Platform Dependencies</h3>
+    <ul>
+      <li><strong>Platform Dependency Risk:</strong> Our app's availability depends on third-party platforms (Google Play, Apple App Store) which may change policies or remove our app without notice</li>
+      <li><strong>No Platform Compliance Guarantee:</strong> We cannot guarantee continuous compliance with all app store policies and platform requirements</li>
+      <li><strong>Platform Policy Changes:</strong> App store policies may change, affecting our service delivery or availability</li>
+      <li><strong>User Acknowledgment:</strong> By using our app, you acknowledge the inherent risks of platform-dependent software</li>
+    </ul>
+
+    <h3>18.2 Business and Regulatory Compliance Limitations</h3>
+    <ul>
+      <li><strong>Multi-Jurisdictional Challenges:</strong> Our business operates globally but is primarily governed by UK law</li>
+      <li><strong>Regulatory Variation:</strong> Different countries have varying business license, tax, and operational requirements</li>
+      <li><strong>No Universal Compliance Guarantee:</strong> We cannot guarantee compliance with all local regulations in every jurisdiction where users access our app</li>
+      <li><strong>Regulatory Change Impact:</strong> Changes in government regulations may affect our service delivery</li>
+    </ul>
+
+    <h3>18.3 Force Majeure and Business Continuity</h3>
+    <ul>
+      <li><strong>Extraordinary Circumstances:</strong> Our data processing and service delivery may be interrupted by circumstances beyond our control including natural disasters, pandemics, wars, cyber attacks, or infrastructure failures</li>
+      <li><strong>Service Continuity:</strong> We make no guarantees about service availability during force majeure events</li>
+      <li><strong>Data Protection During Emergencies:</strong> During extraordinary circumstances, standard data protection procedures may be affected</li>
+    </ul>
+  </div>
+
+  <!-- 19. COMPLETE LIABILITY AND WARRANTY -->
+  <div class="section">
+    <span class="section-number">Section 19</span>
+    <h2 class="section-title">Complete Liability and Warranty Disclaimers</h2>
+
+    <h3>19.1 Maximum Legal Protection</h3>
+    <ul>
+      <li><strong>Service "As-Is":</strong> All data processing, privacy protections, and services are provided "as is" without warranties of any kind</li>
+      <li><strong>No Privacy Guarantees:</strong> While we implement security measures, we cannot guarantee absolute privacy or security protection</li>
+      <li><strong>User Risk Assumption:</strong> Users acknowledge they use our service at their own risk regarding privacy and data security</li>
+      <li><strong>Maximum Legal Limitations:</strong> All protections and limitations apply to the fullest extent permitted by applicable law in each jurisdiction</li>
+    </ul>
+
+    <h3>19.2 User Indemnification for Privacy Matters</h3>
+    <p>User Protection of Our Business: Users agree to protect, defend, and hold us harmless from any privacy-related claims, including:</p>
+    <ul>
+      <li>Claims arising from user's own privacy settings or choices</li>
+      <li>Claims arising from user's sharing of their own data with third parties</li>
+      <li>Claims arising from user's violation of privacy laws or regulations</li>
+      <li>Claims arising from user's misuse of our privacy features or settings</li>
+    </ul>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="section" style="background: var(--green-pale); border-color: var(--accent); text-align: center;">
+    <p style="font-size: 1rem; color: var(--green); font-weight: 500; line-height: 1.8;">
+      By using Budget Smart Meal Planner , you acknowledge that you have read, understood, and agree to this Privacy Policy and consent to the collection, use, and sharing of your information as described herein.
+    </p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>Budget Smart Meal Planner</strong></p>
+  <p style="margin-top:6px;">2nd Floor College House, 17 King Edwards Road, Ruislip, London, United Kingdom, HA4 7AE</p>
+  <p style="margin-top:4px;"><a href="mailto:smartmealpro1@gmail.com" style="color:rgba(255,255,255,0.8);">smartmealpro1@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
